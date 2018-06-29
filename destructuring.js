@@ -41,8 +41,9 @@ var obj =
 
 // * The arguments are used as an object that gets destructured as we we enter the function.
 // * This negates incorrect order of arguments when a function is called, and also allows us
-// * to leave out arguments without passing in null as they will just be marked undefined.
-function calculateBMI({ weight, height, max, callback })
+// * to leave out arguments without passing in null as they will just be marked undefined or
+// * in this case, 25 as a default parameter.
+function calculateBMI({ weight, height, max = 25, callback })
 {
   var bmi = weight / Math.pow(height, 2);
 
